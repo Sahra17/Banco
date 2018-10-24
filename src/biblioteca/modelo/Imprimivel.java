@@ -1,4 +1,4 @@
-package banco.modelo;
+package biblioteca.modelo;
 
 public interface Imprimivel {
 	String imprimeEmLista();

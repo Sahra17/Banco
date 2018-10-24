@@ -1,6 +1,6 @@
-package banco;
+package biblioteca;
 
-import banco.ui.InterfaceTexto;
+import biblioteca.ui.InterfaceTexto;
 
 
 public class Principal {
@@ -8,7 +8,7 @@ public class Principal {
 	public static void main(String[] args) {
 		InterfaceTexto interfaceTexto = new InterfaceTexto();
 		
-		System.out.println("Agência Bancária");
+		System.out.println("Biblioteca Municipal");
 			
 		interfaceTexto.executa();
 
