@@ -40,21 +40,21 @@ public class InterfaceLivroTexto extends InterfaceModeloTexto {
 		System.out.print("Insira o ID do autor: ");
 		int idAutor = entrada.nextInt();
 		
-		Autor autor = AutorDao.getByKey(idAutor);
+		Autor autor = autorDao.getByKey(idAutor);
 		
-		return new Livro(0, titulo, anoPublicacao, editora);
+		return new Livro(0, titulo, anoPublicacao, editora, autor);
 	}
 
 	@Override
 	public void listarTodos() {
-		List<Livro> livro = dao.getAll();
+		List<Livro> livros = dao.getAll();
 		
 		System.out.println("Lista de livros");
 		System.out.println();
 		
-		System.out.println("id\t\ttitulo\tanoPublicacao\tID do Autor\tNome do Autor");
+		System.out.println("id\t\ttitulo\tanoPublicacao\teditora\tNome do Autor");
 		
-		for (Livro livros : livro) {
+		for (Livro livro : livros) {
 			imprimeItem(livro);
 		}
 	}

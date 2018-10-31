@@ -33,21 +33,21 @@ public class InterfaceAutorTexto extends InterfaceModeloTexto {
 		System.out.println("Adicionar autor");
 		System.out.println();
 		
-		Autor novoCliente = obtemDadoAutor(null);	
+		Autor novoAutor = obtemDadosAutor(null);	
 		dao.insert(novoAutor);
 		
 	}
 
 	@Override
 	public void listarTodos() {
-		List<Autor> autor = dao.getAll();
+		List<Autor> autores = dao.getAll();
 		
 		System.out.println("Lista de clientes");
 		System.out.println();
 		
 		System.out.println("id\tNome\tCPF");
 		
-		for (Autor autor : autor) {
+		for (Autor autor : autores) {
 			imprimeItem(autor);
 		}
 		
